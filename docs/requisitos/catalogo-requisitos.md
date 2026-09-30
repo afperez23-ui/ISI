@@ -278,7 +278,15 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
-| NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+
+| NFR-01 | NFR-Q |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | ---  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual.
+
+| NFR-02 | NFR-I | La plataforma admitirá gallego y español como idiomas por los cuales el usuario podrá decidir cual usar | G | --- | Inspección visual y prueba de interfaz: revisar la totalidad de pantallas, formularios, validaciones y mensajes de la primera versión en castellano y gallego tras conmutar la opción de idioma. |
+
+| NFR-03 | NFR-R | La plataforma ofrecerá acceso mediante una interfaz web sin neceisdad de ningún tipo de instalación nativa o de software de escritorio o plugin   | G | --- | Pruebas de compatibilidad y diseño responsivo en navegadores estándar sobre diversos dispositivos (móviles, tablets y escritorio) sin software adicional; inspección del código cliente para verificar el uso exclusivo de HTML5, CSS y ECMAScript sin dependencias de plugins propietarios. |
+
+| NFR-04 | NFR-Q | La plataforma debe realizar copias de seguridad diarias sobre la información de la salud y las recetas respectivamente, garantizando a su vez una recuperación de sus funciones principales en un máximo de 4 horas | G | Prueba de simulación de desastre (Disaster Recovery): ejecutar un corte programado/incidente grave simulado, restaurar el sistema desde la copia de seguridad y comprobar que las funciones principales están operativas en menos de 4 horas; auditar los registros para verificar la ejecución diaria del backup y que la pérdida de datos de salud y recetas no supere las 24 horas. |
+| --- | --- | --- | --- | --- | --- | --- |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
